@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FightRight", "FightRight\FightRight.csproj", "{0DF56591-DE8A-4F93-8C35-4C505EA9B21B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DF56591-DE8A-4F93-8C35-4C505EA9B21B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DF56591-DE8A-4F93-8C35-4C505EA9B21B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DF56591-DE8A-4F93-8C35-4C505EA9B21B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DF56591-DE8A-4F93-8C35-4C505EA9B21B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E8FD495-A9DA-4905-A389-89CD455A3472}
+	EndGlobalSection
+EndGlobal
