@@ -1,0 +1,306 @@
+﻿
+@{
+	ViewBag.Title = "Fighter Comparison - Chart";
+}
+
+
+@model FightRight.Models.FighterChart
+
+
+
+
+
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+
+	@*<div class="">
+		<div class="">*@
+	@*<div class="card mb-4">
+		<div class="card mb-4">*@
+<div class="card-body text-center">
+	<table id="Fighters" class="table table-responsive">
+		<thead>
+
+			<tr>
+				<th scope="col" colspan="3">
+					<div class="col-xl-12 col-md-6">
+						<div class="card text-black shadow-lg shadow">
+							@*<div class="card-body">FIGHTER A</div>*@
+							@if (Model.fightersA != null)
+							{
+								var dropText = (Model.currentFighterNameA == "") ? "Select Fighter" : Model.currentFighterNameA;
+
+								@Html.DropDownList("fighterSelectA", new SelectList(Model.fightersA.Values), dropText, new { @id = "FighterSelectA", @class = " text-body dropdown-menu-xxl-start card-body", @height = "100%", @width = "80%" })
+							}
+						</div>
+					</div>
+				</th>
+
+
+				<th scope="col" colspan="3">
+					<div class="col-xl-12 col-md-6">
+						<div class="card text-black shadow-lg ">
+							@*<div class="card-body">FIGHTER B</div>*@
+							@if (Model.fightersA != null)
+							{
+
+								var dropText = (Model.currentFighterNameB == "") ? "Select Fighter" : Model.currentFighterNameB;
+
+								@Html.DropDownList("fighterSelectB", new SelectList(Model.fightersB.Values), dropText, new { @id = "FighterSelectB", @class = " text-black dropdown-menu-xxl-start card-body", @height = "100%", @width = "80%" })
+							}
+						</div>
+					</div>
+				</th>
+
+			</tr>
+		</thead>
+
+		@*<tbody>*@
+
+		<th scope="col" colspan="3" class="">
+			@*<div class="text-start">*@
+			<div class="col-xl-12 col-md-6 text-center">
+				<div class="card text-black">
+					@*<div class="card-title card-header">Stats:</div>*@
+					<div class="text-black card-body text-start">
+						@foreach (var label in Model.dcFighterA_stats)
+						{
+
+							@label.Label
+							@label.value
+							<br>
+						}
+
+
+					</div>
+					@*<hr />*@
+
+					<br>
+					<br>
+					<br>
+
+
+					<!--<div class="card-title">Profile:</div>
+					<div class=" text-black card-text">-->
+					@*<div class=" text-black card-footer">*@
+					@*@foreach (var label in Model.dcFighterA_profile)
+						{
+							if (label.valueString != "")
+							{
+								@label.Label
+								@label.valueString
+								<br>
+							}
+						}*@
+
+
+					@*</div>*@
+
+
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+				</div>
+			</div>
+		</th>
+
+		<th scope="col" colspan="3" class="">
+			@*<div class="text-start">*@
+			<div class="col-xl-12 col-md-6 text-center">
+				<div class="card text-black">
+					@*<div class="card-title card-header text-black">Stats:</div>*@
+					@*<div class="card-body">Stats:</div>*@
+					<div class="text-black card-body text-start">
+						@*<div class="bg-danger text-black card-footer">*@
+						@foreach (var label in Model.dcFighterB_stats)
+						{
+							@label.Label
+							@label.value
+							<br>
+						}
+
+
+					</div>
+					@*<hr />*@
+
+					<br>
+					<br>
+					<br>
+
+					@*<div class="card-text card-title">Profile:</div>
+						<div class="text-black card-text">
+							@foreach (var label in Model.dcFighterB_profile)
+							{
+								if (label.valueString != "")
+								{
+									@label.Label
+									@label.valueString
+									<br>
+								}
+							}
+
+
+						</div>*@
+
+
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+				</div>
+			</div>
+		</th>
+
+
+		@*</tbody>*@
+
+	</table>
+
+
+	<br><br>
+	<div>
+		<button class="button-action" id="btnFighterSelect" name="btnFighterSelect" value="Submit">Run Comparison</button>
+	</div>
+
+</div>
+		@*</div>
+	</div>*@
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<th scope="row" colspan="3" class="align-text-top text-md-start bg-success card-body">
+
+
+		Stats:
+		<hr />
+
+		@foreach (var label in Model.dcFighterA_stats)
+		{
+			@label.Label
+			@label.value
+			<br>
+		}
+		<br>
+		<br>
+		<br>
+		Profile:
+		<br>
+		@foreach (var label in Model.dcFighterA_profile)
+		{
+			if (label.valueString != "")
+			{
+				@label.Label
+				@label.valueString
+				<br>
+			}
+		}
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+
+	</th>*@
+
+@*<th scope="row" colspan="3" class="align-text-top text-md-start bg-danger">
+
+		Stats:
+		<hr />
+
+		@foreach (var label in Model.dcFighterB_stats)
+		{
+			@label.Label
+			@label.value
+			<br>
+		}
+
+		<br>
+		<br>
+		<br>
+
+
+		Profile:
+		<br>
+		@foreach (var label in Model.dcFighterB_profile)
+		{
+			if (label.valueString != "")
+			{
+				@label.Label
+				@label.valueString
+				<br>
+			}
+		}
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+	</th>*@
+@*<th scope="col" colspan="3">
+		@if (Model.fightersA != null)
+		{
+			if (Model.currentFighterNameA != "" && Model.currentFighterNameA != null)
+			{
+				@Html.DropDownList("fighterSelectA", new SelectList(Model.fightersA.Values), Model.currentFighterNameA, new { @id = "FighterSelectA", @class = "bar_display_winner" })
+
+			}
+			else
+			{
+				@Html.DropDownList("fighterSelectA", new SelectList(Model.fightersA.Values), "Select Fighter", new { @id = "FighterSelectA", @class = "bar_display_winner" })
+			}
+		}
+
+	</th>*@
+
+
+@*<th scope="col" colspan="3">*@
+@*@if (Model.fightersB != null)*@
+@*{*@
+<!--if (Model.currentFighterNameB != "" && Model.currentFighterNameB != null)
+	{
+
+		@*@Html.DropDownList("FighterSelectB", new SelectList(Model.fightersB.Values), Model.currentFighterNameB, new { @id = "FighterSelectB" })*@
+
+		@*@Html.DropDownList("FighterSelectB", new SelectList(Model.fightersB.Values), Model.currentFighterNameB, new { @class = "form-control", @id = "FighterSelectB" })*@
+	<!--}
+	else
+	{
+		@*@Html.DropDownList("FighterSelectB", new SelectList(Model.fightersB.Values), "Select Fighter", new { @id = "FighterSelectB" })*@
+		@*@Html.DropDownList("FighterSelectB", new SelectList(Model.fightersB.Values), "Select Fighter", new { @class = "form-control", @id = "FighterSelectB" })*@
+	<!--}
+}-->
+@*</th>*@
+
+@*<div class="col-xl-3 col-md-6">
+		<div class="card bg-success text-white mb-4">
+			<div class="card-body">FIGHTER B</div>
+			<div class="card-footer d-flex align-items-center justify-content-between">
+				<a class="small text-white stretched-link" href="#">View Details</a>
+				<div class="small text-white"><i class="fas fa-angle-right"></i></div>
+			</div>
+		</div>
+	</div>*@

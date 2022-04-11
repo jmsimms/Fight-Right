@@ -1,0 +1,19 @@
+{
+  "FilePath": "c:\\Users\\bacho\\Desktop\\Capstone\\net\\frRepo\\Fight-Right\\FightRight\\FightRight\\FightRight.csproj",
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 703
+  },
+  "RootNamespace": null,
+  "Documents": [],
+  "SerializationFormat": "0.2"
+}

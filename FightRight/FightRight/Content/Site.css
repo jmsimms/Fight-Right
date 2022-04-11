@@ -157,3 +157,351 @@ button i {
         font-size: 20px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.show-fade {
+    animation: fade-in 1s forwards;
+    -webkit-animation: fade-in 1s forwards;
+}
+
+
+
+.show-fade-2s {
+    animation: fade-in 2s forwards;
+    -webkit-animation: fade-in 2s forwards;
+}
+
+
+
+.show-fade-3s {
+    animation: fade-in 3s forwards;
+    -webkit-animation: fade-in 3s forwards;
+}
+
+
+
+.show-fade-4s {
+    animation: fade-in 4s forwards;
+    -webkit-animation: fade-in 4s forwards;
+}
+
+
+
+.show-fade-5s {
+    animation: fade-in 5s forwards;
+    -webkit-animation: fade-in 5s forwards;
+}
+
+
+.hide-fade {
+    animation: fade-out 1s forwards;
+    -webkit-animation: fade-out 1s forwards;
+}
+
+
+.hide {
+    animation: fade-out 0s forwards;
+    -webkit-animation: fade-out 0s forwards;
+    display: none;
+}
+
+.show {
+    animation: fade-in 0s forwards;
+    -webkit-animation: fade-in 0s forwards;
+    display: block;
+}
+
+
+.fade-in-out-3s {
+    animation: fade-in-out 3s forwards;
+    -webkit-animation: fade-in-out 3s forwards;
+}
+
+
+.blink-3s {
+    animation: fade-in-out 3s forwards infinite;
+    -webkit-animation: fade-in-out 3s forwards infinite;
+}
+
+
+.blink-2s {
+    animation: fade-in-out 2s forwards infinite;
+    -webkit-animation: fade-in-out 2s forwards infinite;
+}
+
+
+.blink-1s {
+    animation: fade-in-out 1s forwards infinite;
+    -webkit-animation: fade-in-out 1s forwards infinite;
+}
+
+
+.bottom_blue {
+    padding: 0 2rem 0 2rem;
+    border-bottom: 0.5rem solid #64a19d;
+}
+
+
+.right_blue {
+    padding: 5rem 1rem 5rem 0;
+    border-right: 0.5rem solid #64a19d;
+}
+
+
+.move-left {
+    animation: move-left 0.5s forwards;
+    -webkit-animation: move-left 0.5s forwards;
+}
+
+
+.move-left-then-right {
+    animation: 4s linear 0s infinite alternate move-right;
+    -webkit-animation: 4s linear 0s infinite alternate move-right;
+}
+
+
+.move-up-then-down {
+    animation: 4s linear 0s infinite alternate move-up;
+    -webkit-animation: 4s linear 0s infinite alternate move-up;
+}
+
+
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes fade-in-out {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@-webkit-keyframes fade-in-out {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@-webkit-keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes move-left {
+    from {
+        transform: translate(0%);
+    }
+
+    to {
+        transform: translate(-100%);
+    }
+}
+
+
+@keyframes move-right {
+    from {
+        transform: translate(0%);
+    }
+
+    to {
+        transform: translate(100%);
+    }
+}
+
+@-webkit-keyframes move-left {
+    from {
+        transform: translate(0%);
+    }
+
+    to {
+        transform: translate(-100%);
+    }
+}
+
+
+@-webkit-keyframes move-right {
+    from {
+        transform: translate(0%);
+    }
+
+    to {
+        transform: translate(100%);
+    }
+}
+
+
+@keyframes move-up {
+    from {
+        transform: translate(0%,0%);
+    }
+
+    to {
+        transform: translate(0%, 100%);
+    }
+}
+
+@-webkit-keyframes move-up {
+    from {
+        transform: translate(0%,0%);
+    }
+
+    to {
+        transform: translate(0%, 100%);
+    }
+}
+
+
+@keyframes move-down {
+    from {
+        transform: translate(0%,0%);
+    }
+
+    to {
+        transform: translate(0%, -100%);
+    }
+}
+
+@-webkit-keyframes move-down {
+    from {
+        transform: translate(0%,0%);
+    }
+
+    to {
+        transform: translate(0%, -100%);
+    }
+}
+
+
+
+
+.bar_display {
+    border: 0.5rem solid #64a19d;
+    overflow: hidden;
+    width:100%;
+}
+
+
+.bar_display_loser {
+    background-color:darkred;
+}
+
+
+.bar_display_winner {
+    background-color:green;
+}
+
+
+.polling_message {
+    color: white;
+    float: left;
+    margin-right: 2%;
+}
+
+.view_port {
+    background-color: black;
+    height: 25px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.cylon_eye {
+    background-color: red;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .9) 25%, rgba(0, 0, 0, .1) 50%, rgba(0, 0, 0, .9) 75%);
+    color: white;
+    height: 100%;
+    width: 20%;
+    -webkit-animation: 4s linear 0s infinite alternate move_eye;
+    animation: 4s linear 0s infinite alternate move_eye;
+}
+
+@-webkit-keyframes move_eye {
+    from {
+        margin-left: -20%;
+    }
+
+    to {
+        margin-left: 100%;
+    }
+}
+
+@keyframes move_eye {
+    from {
+        margin-left: -20%;
+    }
+
+    to {
+        margin-left: 100%;
+    }
+}
+
+
+

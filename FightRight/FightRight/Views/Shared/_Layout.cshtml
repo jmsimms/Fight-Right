@@ -6,23 +6,84 @@
 	<meta name="viewport" content="width=device-width" />
 	<title>@ViewBag.Title</title>
 	@Scripts.Render("~/bundles/jquery")
-	<script src="https://kit.fontawesome.com/91e8566f66.js" crossorigin="anonymous"></script>
 	@Styles.Render("~/Content/css")
+	@Scripts.Render("~/bundles/modernizr")
+	<script src="https://kit.fontawesome.com/91e8566f66.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
-	<div id="site-header">
-		<i id="site-icon" class="fas fa-user-music"></i>
-		<span class="full-content">Fight Right <i class="fa-solid fa-hand-back-fist"></i></span>
-		<span class="mobile-content">FR <i class="fa-solid fa-hand-back-fist"></i></span>
+
+	<nav class="sb-topnav navbar navbar-dark bg-dark">
+
+
+		<!-- Navbar Brand-->
+		<a class="navbar-brand ps-3" href="~/Home/Index">Fight Right</a>
+
+
+		<!-- Sidebar Toggle-->
+		<button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0 mobile-content text-end align-content-end"  id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+	</nav>
+	<div id="layoutSidenav">
+		<div id="layoutSidenav_nav">
+			<nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+				<div class="sb-sidenav-menu">
+					<div class="nav">
+						<div class="sb-sidenav-menu-heading">Home</div>
+						<a class="nav-link" href="~/Home/Index">
+							<div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+							Front page
+						</a>
+						<div class="sb-sidenav-menu-heading">Fighters</div>
+						<a class="nav-link collapsed" href="~/FighterComparison/Index" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+							<div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+							Compare
+
+						</a>
+
+						<a class="nav-link collapsed" href="~/ViewFighter/Index" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+							<div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+							Fighter Info
+
+						</a>
+
+						<div class="sb-sidenav-menu-heading">Events</div>
+						<a class="nav-link" href="charts.html">
+							<div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+							Not implemented
+						</a>
+						<a class="nav-link" href="tables.html">
+							<div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+							Not implemented
+						</a>
+					</div>
+				</div>
+				<div class="sb-sidenav-footer text-center">
+					Fight Right
+					<div class="small">Find your fight</div>
+				</div>
+			</nav>
+		</div>
+		<div id="layoutSidenav_content">
+			<main>
+				@RenderBody()
+			</main>
+
+			@*@for(int x = 0; x < 50; x++)
+				{
+					<br />
+				}*@
+
+
+		</div>
 	</div>
-	<div class="icon-bar">
-		<a id="icon-bar-home" href="~/Home/Index" title="Go to Home"><i class="fa fa-home"></i></a>
-		<a id="icon-bar-fighter_comparison" href="~/FighterComparison/Index" title="Fighter Comparison"><i class="fa-solid fa-people-arrows-left-right"></i></a>
-		<a id="icon-bar-signin" href="~/Profile/SignIn" title="Sign In"><i class="fas fa-sign-in-alt"></i></a>
-		<a id="icon-bar-signup" href="~/Profile/SignUp" title="Sign Up"><i class="fas fa-user-plus"></i></a>
-	</div>
-	<div id="workspace">
-		@RenderBody()
-	</div>
+
+
+
+	<script src="~/Scripts/siteScripts.js"></script>
+	<script src="~/Scripts/Chart.js"></script>
+	@Scripts.Render("~/bundles/jquery")
+	@RenderSection("scripts", required: false)
+
+
 </body>
 </html>

@@ -1,22 +1,28 @@
-﻿
+﻿@model FightRight.Models.FighterChart
+
 @{
 	ViewBag.Title = "Fighter Comparison";
 }
 
-<h2>@ViewBag.Title</h2>
 
-<label for="fighters">Fighter 1:</label>
+<div class="container-fluid px-4 text-center" style="width:75%">
+	<h1 class="mt-4 text-black" style="text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; ">FIGHT RIGHT</h1>
+	<h3 class="mt-4 text-black" style="text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; ">CHOOSE YOUR FIGHTERS</h3>
 
-<select name="fighters" id="fighter">
-	<option value="Francis Ngannou">Francis Ngannou</option>
-	<option value="Cyril Gane">Cyril Gane</option>
+	<div class="progress">
+		<div class="progress-bar bg-success" role="progressbar" style="width:40%">
+			Probably
+		</div>
+		<div class="progress-bar bg-warning" role="progressbar" style="width:10%">
+			Would
+		</div>
+		<div class="progress-bar bg-danger" role="progressbar" style="width:20%">
+			Work for Comparisons
+		</div>
+	</div>
 
-</select>
-&nbsp;
-<label for="fighters">Fighter 2:</label>
 
-<select name="fighters" id="fighter">
-	<option value="Francis Ngannou">Francis Ngannou</option>
-	<option value="Cyril Gane">Cyril Gane</option>
+	@Html.Partial("FighterChart")
 
-</select>
+</div>
+
